@@ -1,37 +1,14 @@
-import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:get_it/get_it.dart';
+import 'package:movie_app/di/get_in.dart' as getIt;
 import 'package:pedantic/pedantic.dart';
+import './presentation/movie_app.dart';
 
-import 'di/get_in.dart' as getIt;
-import 'domain/entities/app_error.dart';
-import 'domain/entities/movie_entity.dart';
-import 'domain/entities/no_params.dart';
-import 'domain/usecases/get_trending.dart';
-
-Future<void> main() async {
+void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  unawaited(
+      SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]));
   unawaited(getIt.init());
-  GetTrending getTrending = getIt.getItInstance<GetTrending>();
-  final Either<AppError, List<MovieEntity>> eitherResponse =
-      await getTrending(NoParams());
-  eitherResponse.fold((l) {
-    print('error');
-    print(l);
-  }, (r) {
-    print("List of Movies: ");
-    print(r);
-  });
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: Container(),
-    );
-  }
+  runApp(MovieApp());
 }
