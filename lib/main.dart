@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:get_it/get_it.dart';
-import 'package:movie_app/di/get_in.dart' as getIt;
 import 'package:pedantic/pedantic.dart';
-import './presentation/movie_app.dart';
+
+import 'di/get_in.dart' as getIt;
+import 'presentation/movie_app.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();

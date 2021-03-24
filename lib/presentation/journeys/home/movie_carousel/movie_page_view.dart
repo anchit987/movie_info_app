@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:movie_app/common/constants/size_constants.dart';
-import 'package:movie_app/common/screenutil/screenutil.dart';
-import 'package:movie_app/domain/entities/movie_entity.dart';
-import 'package:movie_app/presentation/journeys/home/movie_carousel/movie_card_widget.dart';
+
+import '../../../../common/constants/size_constants.dart';
 import '../../../../common/extensions/size_extension.dart';
+import '../../../../common/screenutil/screenutil.dart';
+import '../../../../domain/entities/movie_entity.dart';
+import 'movie_card_widget.dart';
 
 class MoviePageView extends StatefulWidget {
   final List<MovieEntity> movies;

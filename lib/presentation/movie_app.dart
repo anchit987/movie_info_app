@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 import '../common/screenutil/screenutil.dart';
+import 'journeys/home/home_screen.dart';
 import 'themes/theme_color.dart';
 import 'themes/theme_text.dart';
-import './journeys/home/home_screen.dart';
 
 class MovieApp extends StatelessWidget {
   @override

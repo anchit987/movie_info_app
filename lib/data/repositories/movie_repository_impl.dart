@@ -1,8 +1,9 @@
 import 'package:dartz/dartz.dart';
-import 'package:movie_app/data/data_sources/movie_remote_data_source..dart';
-import 'package:movie_app/domain/entities/app_error.dart';
-import 'package:movie_app/domain/entities/movie_entity.dart';
-import 'package:movie_app/domain/repositories/movie_repository.dart';
+
+import '../../domain/entities/app_error.dart';
+import '../../domain/entities/movie_entity.dart';
+import '../../domain/repositories/movie_repository.dart';
+import '../data_sources/movie_remote_data_source..dart';
 
 class MovieRepositoryImp extends MovieRepository {
   final MovieRemoteDataSource remoteDataSource;

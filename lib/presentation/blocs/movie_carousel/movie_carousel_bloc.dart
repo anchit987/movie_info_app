@@ -3,9 +3,10 @@ import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
-import 'package:movie_app/domain/entities/movie_entity.dart';
-import 'package:movie_app/domain/entities/no_params.dart';
-import 'package:movie_app/domain/usecases/get_trending.dart';
+
+import '../../../domain/entities/movie_entity.dart';
+import '../../../domain/entities/no_params.dart';
+import '../../../domain/usecases/get_trending.dart';
 
 part 'movie_carousel_event.dart';
 part 'movie_carousel_state.dart';

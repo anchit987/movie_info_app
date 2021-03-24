@@ -1,9 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:movie_app/common/constants/size_constants.dart';
-import 'package:movie_app/common/screenutil/screenutil.dart';
+
+import '../../common/constants/size_constants.dart';
 import '../../common/extensions/size_extension.dart';
+import '../../common/screenutil/screenutil.dart';
 import 'logo.dart';
 
 class MovieAppBar extends StatelessWidget {

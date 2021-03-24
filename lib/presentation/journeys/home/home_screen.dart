@@ -1,9 +1,9 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:movie_app/di/get_in.dart';
-import 'package:movie_app/presentation/journeys/home/movie_carousel/movie_carousel_widget.dart';
+
+import '../../../di/get_in.dart';
 import '../../blocs/movie_carousel/movie_carousel_bloc.dart';
+import 'movie_carousel/movie_carousel_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
