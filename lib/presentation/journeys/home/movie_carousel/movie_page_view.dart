@@ -28,7 +28,7 @@ class _MoviePageViewState extends State<MoviePageView> {
     _pageController = PageController(
       initialPage: widget.initialPage,
       keepPage: false,
-      viewportFraction: 0.7,
+      viewportFraction: 0.65,
     );
   }
 
@@ -44,6 +44,7 @@ class _MoviePageViewState extends State<MoviePageView> {
       margin: EdgeInsets.symmetric(vertical: Sizes.dimen_10.h),
       height: ScreenUtil.screenHeight * 0.35,
       child: PageView.builder(
+        controller: _pageController,
         itemBuilder: (context, index) {
           final movie = widget.movies[index];
           return MovieCardWidget(

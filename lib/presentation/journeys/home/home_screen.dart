@@ -11,28 +11,28 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  MovieCarouselBloc movieCrouselBloc;
+  MovieCarouselBloc movieCarouselBLoc;
 
   @override
   void initState() {
     super.initState();
-    movieCrouselBloc = getItInstance<MovieCarouselBloc>();
-    movieCrouselBloc.add(CarouselLoadEvent());
+    movieCarouselBLoc = getItInstance<MovieCarouselBloc>();
+    movieCarouselBLoc.add(CarouselLoadEvent());
   }
 
   @override
   void dispose() {
     super.dispose();
-    movieCrouselBloc?.close();
+    movieCarouselBLoc?.close();
   }
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider<MovieCarouselBloc>(
-      create: (context) => movieCrouselBloc,
+      create: (context) => movieCarouselBLoc,
       child: Scaffold(
         body: BlocBuilder<MovieCarouselBloc, MovieCarouselState>(
-          bloc: movieCrouselBloc,
+          bloc: movieCarouselBLoc,
           builder: (context, state) {
             if (state is MovieCarouselLoaded) {
               return Stack(
