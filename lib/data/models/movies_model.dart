@@ -54,10 +54,10 @@ class MovieModel extends MovieEntity {
       posterPath: json['poster_path'],
       title: json['title'],
       video: json['video'],
-      voteAverage: json['vote_average'],
+      voteAverage: json['vote_average']?.toDouble() ?? 0.0,
       id: json['id'],
       overview: json['overview'],
-      popularity: json['popularity'],
+      popularity: json['popularity']?.toDouble() ?? 0.0,
       mediaType: json['media_type'],
     );
   }
